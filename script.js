@@ -53,7 +53,7 @@ document.querySelector('.check').addEventListener('click', function () {
     displayNumber(secretNumber);
 
     changeBackgroundColor('#60b347');
-    changeNumberWidth('30rem');
+    changeNumberWidth('18rem');
 
     if (score > highScore) {
       highScore = score;
@@ -85,7 +85,7 @@ document.querySelector('.again').addEventListener('click', function () {
   changeHighScoreLabel('🏆 Highscore:');
 
   changeBackgroundColor('#222');
-  changeNumberWidth('15rem');
+  changeNumberWidth('10rem');
 });
 
 // Original code before refactoring...
