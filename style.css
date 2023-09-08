@@ -117,3 +117,11 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.label-highscore {
+  display: inline-block;
+}
+
+.highscore {
+  display: inline-block;
+}
