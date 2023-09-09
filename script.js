@@ -50,15 +50,17 @@ document.querySelector('.check').addEventListener('click', function () {
     //   ------------  When the player wins  ------------
   } else if (guess === secretNumber) {
     displayMessage('🎉 Correct Number!');
-    displayNumber(secretNumber);
+    // displayNumber(secretNumber);
+    displayNumber('😁');
 
     changeBackgroundColor('#60b347');
-    changeNumberWidth('18rem');
 
     if (score > highScore) {
       highScore = score;
       changeHighScoreLabel('🥇  New Highscore!');
       changeHighScoreNumber(highScore);
+      document.querySelector('.number').style.backgroundColor = '#60b347';
+      document.querySelector('.number').style.fontSize = '6.2rem';
     }
     //   ------------  When guess is wrong  ------------
   } else if (guess !== secretNumber) {
@@ -85,7 +87,8 @@ document.querySelector('.again').addEventListener('click', function () {
   changeHighScoreLabel('🏆 Highscore:');
 
   changeBackgroundColor('#222');
-  changeNumberWidth('10rem');
+  document.querySelector('.number').style.backgroundColor = '#eee';
+  document.querySelector('.number').style.fontSize = '4.8rem';
 });
 
 // Original code before refactoring...
