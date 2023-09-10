@@ -36,14 +36,14 @@ const changeNumberWidth = function (numberWidth) {
   document.querySelector('.number').style.width = numberWidth;
 };
 
-const changeNumberBackgroundColor = function (backgroundColor) {
-document.querySelector('.number').style.backgroundColor = '#60b347' = backgroundColor
-}
+const changeNumberBackgroundColor = function (numberBackgroundColor) {
+  document.querySelector('.number').style.backgroundColor =
+    numberBackgroundColor;
+};
 
 const changeNumberFontsize = function (numberFontsize) {
   document.querySelector('.number').style.fontSize = numberFontsize;
-
-}
+};
 
 // ------------ GAME BUTTONS ------------
 const decrementButtonHandler = function () {
