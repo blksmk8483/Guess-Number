@@ -36,22 +36,27 @@ const changeNumberWidth = function (numberWidth) {
   document.querySelector('.number').style.width = numberWidth;
 };
 
-decrementButton.addEventListener('click', function () {
+// ------------ GAME BUTTONS ------------
+const decrementButtonHandler = function () {
   let currentValue = parseInt(guessInput.value);
   if (currentValue > 1) {
     currentValue--;
     guessInput.value = currentValue;
   }
-});
+};
 
-incrementButton.addEventListener('click', function () {
+const incrementButtonHandler = function () {
   let currentValue = parseInt(guessInput.value);
   if (currentValue < 20) {
     currentValue++;
     guessInput.value = currentValue;
   }
-});
+};
 
+decrementButton.addEventListener('click', decrementButtonHandler);
+incrementButton.addEventListener('click', incrementButtonHandler);
+
+// ------------ GAME LOGIC ------------
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
@@ -60,8 +65,11 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === secretNumber) {
     displayMessage('🎉 Correct Number!');
     displayNumber('😁');
-
     changeBackgroundColor('#60b347');
+
+    // TURNS THE BUTTONS OFF
+    decrementButton.removeEventListener('click', decrementButtonHandler);
+    incrementButton.removeEventListener('click', incrementButtonHandler);
 
     if (score > highScore) {
       highScore = score;
@@ -78,10 +86,15 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       displayMessage('💥 You lost the game!');
       changeScoreNumber(0);
+
+      // TURNS THE BUTTONS OFF
+      decrementButton.removeEventListener('click', decrementButtonHandler);
+      incrementButton.removeEventListener('click', incrementButtonHandler);
     }
   }
 });
 
+// ------------ RESET LOGIC ------------
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -95,4 +108,8 @@ document.querySelector('.again').addEventListener('click', function () {
   changeBackgroundColor('#222');
   document.querySelector('.number').style.backgroundColor = '#eee';
   document.querySelector('.number').style.fontSize = '4.8rem';
+
+  // TURNS THE BUTTONS BACK ON
+  decrementButton.addEventListener('click', decrementButtonHandler);
+  incrementButton.addEventListener('click', incrementButtonHandler);
 });
