@@ -88,7 +88,7 @@ document.querySelector('.again').addEventListener('click', function () {
   displayMessage('Start guessing...');
 
   displayNumber('?');
-  guessInput.value = '';
+  guessInput.value = 10;
   changeScoreNumber(score);
   changeHighScoreLabel('🏆 Highscore:');
 
