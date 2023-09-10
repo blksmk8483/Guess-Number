@@ -86,6 +86,7 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       displayMessage('💥 You lost the game!');
       changeScoreNumber(0);
+      changeBackgroundColor('#bc0707');
 
       // TURNS THE BUTTONS OFF
       decrementButton.removeEventListener('click', decrementButtonHandler);
