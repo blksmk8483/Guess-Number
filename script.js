@@ -36,6 +36,15 @@ const changeNumberWidth = function (numberWidth) {
   document.querySelector('.number').style.width = numberWidth;
 };
 
+const changeNumberBackgroundColor = function (backgroundColor) {
+document.querySelector('.number').style.backgroundColor = '#60b347' = backgroundColor
+}
+
+const changeNumberFontsize = function (numberFontsize) {
+  document.querySelector('.number').style.fontSize = numberFontsize;
+
+}
+
 // ------------ GAME BUTTONS ------------
 const decrementButtonHandler = function () {
   let currentValue = parseInt(guessInput.value);
@@ -75,8 +84,8 @@ document.querySelector('.check').addEventListener('click', function () {
       highScore = score;
       changeHighScoreLabel('🥇  New Highscore!');
       changeHighScoreNumber(highScore);
-      document.querySelector('.number').style.backgroundColor = '#60b347';
-      document.querySelector('.number').style.fontSize = '6.2rem';
+      changeNumberBackgroundColor('#60b347');
+      changeNumberFontsize('6.2rem');
     }
   } else if (guess !== secretNumber) {
     if (score > 1) {
@@ -86,6 +95,9 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       displayMessage('💥 You lost the game!');
       changeScoreNumber(0);
+      displayNumber('🙁');
+      changeNumberBackgroundColor('#bc0707');
+      changeNumberFontsize('6.2rem');
       changeBackgroundColor('#bc0707');
 
       // TURNS THE BUTTONS OFF
