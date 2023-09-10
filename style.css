@@ -17,6 +17,15 @@ body {
   /* background-color: #60b347; */
 }
 
+main {
+  color: #eee;
+}
+
+header {
+  border-bottom: 7px solid #eee;
+  text-align: center;
+}
+
 /* ------BUTTONS */
 .btn {
   border: none;
@@ -34,10 +43,6 @@ body {
 
 @media (min-width: 852px) {
   /* ------  1st part ------- */
-  header {
-    border-bottom: 7px solid #eee;
-    text-align: center;
-  }
 
   h1 {
     font-size: 5.2rem;
@@ -64,9 +69,6 @@ body {
   }
 
   /* ----------Main section */
-  main {
-    color: #eee;
-  }
 
   .guessBox {
     /* width: 100vw; */
@@ -139,10 +141,6 @@ body {
 
 @media (max-width: 851px) {
   /* ------  1st part ------- */
-  header {
-    border-bottom: 7px solid #eee;
-    text-align: center;
-  }
 
   h1 {
     font-size: 2rem;
@@ -169,9 +167,6 @@ body {
   }
 
   /* ----------Main section */
-  main {
-    color: #eee;
-  }
 
   .guessBox {
     /* width: 100vw; */
@@ -244,10 +239,6 @@ body {
 
 @media (max-width: 480px) {
   /* ------  1st part ------- */
-  header {
-    border-bottom: 7px solid #eee;
-    text-align: center;
-  }
 
   h1 {
     font-size: 2rem;
@@ -274,9 +265,6 @@ body {
   }
 
   /* ----------Main section */
-  main {
-    color: #eee;
-  }
 
   .guessBox {
     /* width: 100vw; */
