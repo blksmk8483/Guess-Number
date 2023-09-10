@@ -1,6 +1,6 @@
 # Guess the Number Game
 
-A small JavaScript project using DOM-manipulation to guess the number and keep track of you high-score. Play as many times as you want!
+A small JavaScript project using DOM-manipulation to guess the number and keep track of your high-score. Play as many times as you want!
 
 [Click here](https://blksmk8483.github.io/Guess-Number/) to try it yourself.
 
