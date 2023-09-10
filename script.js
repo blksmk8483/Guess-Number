@@ -74,6 +74,8 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === secretNumber) {
     displayMessage('🎉 Correct Number!');
     displayNumber('😁');
+    changeNumberBackgroundColor('#60b347');
+    changeNumberFontsize('6.2rem');
     changeBackgroundColor('#60b347');
 
     // TURNS THE BUTTONS OFF
