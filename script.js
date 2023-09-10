@@ -67,7 +67,7 @@ incrementButton.addEventListener('click', incrementButtonHandler);
 
 // ------------ GAME LOGIC ------------
 document.querySelector('.check').addEventListener('click', function () {
-  const guess = Number(document.querySelector('.guess').value);
+  const guess = Number(guessInput.value);
 
   if (!guess) {
     displayMessage('⛔️ No Number!');
