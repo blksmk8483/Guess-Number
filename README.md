@@ -10,6 +10,4 @@ This small project was to further practice my JavaScript skills. This particular
 
 ## Take a look:
 
-![mainscreen](/Assets/pic1.jpeg)
-
-![wonscreen](/Assets/pic2.jpeg)
+![mainscreen](/Assets/guess.png)
